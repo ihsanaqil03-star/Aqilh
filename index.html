@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>HBD Shazfa 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+      color: white;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .page {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      padding: 20px;
+      max-width: 400px;
+    }
+
+    .active {
+      display: block;
+      opacity: 1;
+    }
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 15px;
+      background: #ff4da6;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 15px;
+      border: none;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 10px;
+      letter-spacing: 10px;
+    }
+
+    #error {
+      color: #ff6b6b;
+    }
+
+    /* LOVE EFFECT */
+    #hearts span {
+      position: absolute;
+      color: pink;
+      animation: fall 5s linear infinite;
+      font-size: 20px;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10%); opacity: 1; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+
+    /* typing */
+    #text {
+      white-space: pre-line;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LOVE -->
+<div id="hearts"></div>
+
+<!-- HALAMAN 1 -->
+<div id="page1" class="page active">
+  <h1>HBD 🎉</h1>
+  <h2>My adekkk Shazfa 💖</h2>
+  <button onclick="startAll()">Next ➡️</button>
+</div>
+
+<!-- HALAMAN 2 -->
+<div id="page2" class="page">
+  <h2>Masukkan PIN 🔒</h2>
+  <input type="password" id="pinInput" maxlength="6" placeholder="******">
+  <br>
+  <button onclick="checkPin()">Masuk</button>
+  <p id="error"></p>
+</div>
+
+<!-- HALAMAN 3 -->
+<div id="page3" class="page">
+  <h2>💌 Surat</h2>
+  <p id="text"></p>
+</div>
+
+<script>
+  const message = `Hatur nuhun pisan kanggo janten réréncangan kuring anu bingung 
+(sareng anjeun gélo ogé, saleresna) anu ngeusian bewara WA, anu nelepon sababaraha jam. 
+Kuring tungtungna boga pakasaban (sanajan kuring keur dipake dina eta).
+
+HBD, wilujeung tos yuswa, caket kana tungtungna, sareng langkung tiasa ngabully anjeun😝. 
+Kuring ngan bakal nyebutkeun ieu ngagunakeun ieu. Puguh teuing nyieun dokumen panjang siga kamari...mangga wae ieu
